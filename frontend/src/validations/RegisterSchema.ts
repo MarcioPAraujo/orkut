@@ -8,6 +8,10 @@ export type SexOrientation = "Masculino" | "Feminino" | "Outro";
 
 export const RegisterSchema = yup.object().shape({
   name: yup.string().required("Nome é obrigatório"),
+  acceptTerms: yup
+    .boolean()
+    .oneOf([true], "Você deve aceitar os termos e condições")
+    .required("Você deve aceitar os termos e condições"),
   sexOrientation: yup
     .string()
     .oneOf(["Masculino", "Feminino", "Outro"], "Orientação sexual inválida")

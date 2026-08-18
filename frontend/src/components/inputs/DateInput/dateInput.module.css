@@ -30,7 +30,7 @@
   text-align: left;
 
   &:hover {
-    border-color: var(--pink);
+    border-color: var(--soft-pink);
   }
   &.disabled {
     background-color: #0000000A;

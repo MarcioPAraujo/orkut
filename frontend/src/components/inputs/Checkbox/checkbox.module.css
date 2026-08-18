@@ -1,0 +1,47 @@
+.rememberMe {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: fit-content;
+  cursor: pointer;
+
+  font-size: 1.4rem;
+  color: var(--text);
+  font-weight: 300;
+}
+.checkboxContainer {
+  position: relative;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 2px solid var(--gray);
+  border-radius: 0.4rem;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: white;
+
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+.checkboxContainer:has(input[type="checkbox"]:checked) {
+  background-color: var(--pink);
+  border-color: var(--pink);
+
+  svg {
+    opacity: 1;
+  }
+}
+.checkbox {
+  appearance: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}

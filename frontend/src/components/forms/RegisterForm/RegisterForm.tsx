@@ -10,6 +10,7 @@ import {
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
 import styles from "./registerForm.module.css";
+import { Checkbox } from "@/components/inputs/Checkbox/Checkbox";
 
 const RegisterForm = () => {
   const {
@@ -78,6 +79,11 @@ const RegisterForm = () => {
           placeholder="Digite sua senha novamente"
           register={register("passwordConfirmation")}
           errorMessage={errors.passwordConfirmation?.message}
+        />
+        <Checkbox
+          id="terms"
+          label="Aceito os termos e condições"
+          register={register("acceptTerms")}
         />
       </form>
     </div>
