@@ -11,7 +11,6 @@ interface IDateInputProps {
   label: string;
   value: string;
   onChange: (date: string) => void;
-  isRquired?: boolean;
   placeholder?: string;
   disabled?: boolean;
   readonly?: boolean;
@@ -24,7 +23,6 @@ const DateInput: React.FC<IDateInputProps> = ({
   placeholder,
   value,
   readonly = false,
-  isRquired = false,
   disabled = false,
   calendarClassName,
   errorMessage,
@@ -61,10 +59,7 @@ const DateInput: React.FC<IDateInputProps> = ({
   return (
     <div className={styles.container}>
       <div className={styles.field}>
-        <div className={styles.label}>
-          {isRquired && <span>*&nbsp;</span>}
-          {label}
-        </div>
+        <div className={styles.label}>{label}</div>
         <div className={`${combinedClass} ${styles.inputWrapper}`}>
           <input
             type="text"
@@ -80,7 +75,7 @@ const DateInput: React.FC<IDateInputProps> = ({
               type="button"
               id={id}
               disabled={disabled}
-              className={`${combinedClass} ${styles.calendarButton}`}
+              className={`${combinedClass} ${styles.button}`}
               onClick={() => {
                 if (!readonly && !disabled) {
                   setShowCalendar(!showCalendar);

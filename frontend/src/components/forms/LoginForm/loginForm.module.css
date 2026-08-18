@@ -94,6 +94,7 @@
   font-size: 1.4rem;
   color: var(--text);
   font-weight: 300;
+  width: fit-content;
 
   transition: color 0.2s ease-in-out;
 

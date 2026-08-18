@@ -65,32 +65,33 @@
 
 .dayButton {
   aspect-ratio: 1;
+  width: 2.8rem;
   font-size: 1.4rem;
   color: #000000E0;
   background-color: transparent;
   border: 1px solid transparent;
 
   border-radius: 0.8rem;
-
-  &:not(.not-current-month) {
-    &:hover {
-      background-color: #F0F0F0;
-    }
+}
+.selected {
+  border-color: var(--pink);
+  font-weight: 600;
+  color: var(--pink);
+  &:hover {
+    background-color: #FFFFFF;
   }
-  &.not-current-month {
-    color: #FCFCFC;
-  }
-
-  &.selected {
-    border-color: #003366;
-    &:hover {
-      background-color: #FFFFFF;
-    }
-  }
-  &:disabled {
-    cursor: default;
-    filter: brightness(0.5);
-  }
+}
+.today{
+  color: #367FA9;
+  font-weight: 600;
+}
+.weekend {
+  color: #FF0000;
+}
+.otherMonth {
+  color: #00000040;
+  cursor: default;
+  filter: brightness(0.5);
 }
 
 .todayButton {

@@ -64,12 +64,11 @@ const Calendar: React.FC<ICalendar> = ({
   }, [date]);
 
   const getDayClassName = (day: ICalendarDay) => {
-    let className = "";
-    if (day.isToday) className += "today ";
-    if (day.dayOfWeek === 0 || day.dayOfWeek === 6) className += "weekend ";
-    if (!day.isCurrentMonth) className += "not-current-month ";
-    if (day.isSelected) className += "selected ";
-    return className.trim();
+    if (!day.isCurrentMonth) return styles.otherMonth;
+    if (day.isToday) return styles.today;
+    if (day.dayOfWeek === 0 || day.dayOfWeek === 6) return styles.weekend;
+    if (day.isSelected) return styles.selected;
+    return "";
   };
 
   if (!isOpen) return null;
@@ -77,7 +76,7 @@ const Calendar: React.FC<ICalendar> = ({
   return (
     <div
       ref={calendarRef}
-      className={`calendar ${calendarClassName || ""} ${styles.calendar}`}
+      className={`calendar ${calendarClassName || ""} ${styles.container}`}
     >
       <div className={styles.header}>
         <div className={styles.buttonsContainer}>
@@ -127,7 +126,7 @@ const Calendar: React.FC<ICalendar> = ({
             type="button"
             key={idx}
             disabled={!day.isCurrentMonth}
-            className={`${getDayClassName(day)} ${styles.dayButton}`}
+            className={`${styles.dayButton} ${getDayClassName(day)}`}
             onClick={() => {
               setCalendarDate(day.dayDate);
               onChange?.(day.dayDate);
