@@ -11,13 +11,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
 import styles from "./registerForm.module.css";
 import { Checkbox } from "@/components/inputs/Checkbox/Checkbox";
+import { DefaultButton } from "@/components/buttons/DefaultButton/DefaultButton";
 
 const RegisterForm = () => {
   const {
     control,
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting, isValid },
   } = useForm<RegisterSchemaType>({
     mode: "onChange",
     resolver: yupResolver(RegisterSchema),
@@ -82,8 +83,14 @@ const RegisterForm = () => {
         />
         <Checkbox
           id="terms"
-          label="Aceito os termos e condições"
+          label="Li e aceito os termos e condições de uso e privacidade"
           register={register("acceptTerms")}
+        />
+        <DefaultButton
+          label="Criar conta"
+          disabled={isSubmitting || !isValid}
+          type="submit"
+          width="100%"
         />
       </form>
     </div>
