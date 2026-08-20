@@ -6,12 +6,21 @@ import PasswordInput from "@/components/inputs/PasswordInput/PasswordInput";
 import {
   RegisterSchema,
   RegisterSchemaType,
+  SexOrientation,
 } from "@/validations/RegisterSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
 import styles from "./registerForm.module.css";
 import { Checkbox } from "@/components/inputs/Checkbox/Checkbox";
 import { DefaultButton } from "@/components/buttons/DefaultButton/DefaultButton";
+import Select from "@/components/inputs/Select/Select";
+import { IOption } from "@/interfaces/Option";
+
+const genreOptions: IOption<SexOrientation>[] = [
+  { label: "Masculino", value: "Masculino" },
+  { label: "Feminino", value: "Feminino" },
+  { label: "Outro", value: "Outro" },
+];
 
 const RegisterForm = () => {
   const {
@@ -22,6 +31,9 @@ const RegisterForm = () => {
   } = useForm<RegisterSchemaType>({
     mode: "onChange",
     resolver: yupResolver(RegisterSchema),
+    defaultValues: {
+      birthDate: "",
+    },
   });
 
   const handleFormSubmit = (data: RegisterSchemaType) => {
@@ -50,6 +62,22 @@ const RegisterForm = () => {
               value={field.value}
               onChange={field.onChange}
               errorMessage={errors.birthDate?.message}
+            />
+          )}
+        />
+        <Controller
+          control={control}
+          name="sexOrientation"
+          render={({ field }) => (
+            <Select
+              id="genre"
+              label="Gênero"
+              placeholder="Selecione o gênero"
+              enableSearch
+              selectedOption={field.value}
+              options={genreOptions}
+              onChange={field.onChange}
+              error={errors.sexOrientation?.message}
             />
           )}
         />

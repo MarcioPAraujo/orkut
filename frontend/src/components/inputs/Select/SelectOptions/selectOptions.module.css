@@ -1,0 +1,90 @@
+.options {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 100%;
+
+  margin-top: 0.4rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--background);
+  box-shadow: 0px 2px 8px 3px rgba(0, 0, 0, 0.1);
+}
+
+.openUp {
+    bottom: 100%;
+    top: auto;
+    margin-bottom: 0.4rem;
+}
+
+.optionsContainer {
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: none;
+  background-color: transparent;
+  z-index: 1000;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+}
+
+.optionLabel {
+  width: 100%;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 1.6rem;
+  color: var(--text);
+  padding: 0px 0.8rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    transition: background-color 0.3s ease-in-out;
+    color: var(--text);
+    background-color: var(--soft-pink);
+    border-radius: 0.4rem;
+  }
+
+  &:has(input:checked) {
+    background-color: var(--soft-pink);
+    color: var(--pink);
+    font-weight: 700;
+
+    svg {
+      display: inline;
+    }
+  }
+  svg {
+    display: none;
+    fill: var(--pink);
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+
+
+.optionText {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.radioInput {
+  display: none;
+}

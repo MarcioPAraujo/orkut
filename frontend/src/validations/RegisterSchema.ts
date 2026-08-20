@@ -1,3 +1,4 @@
+import { IOption } from "@/interfaces/Option";
 import { dateRegex } from "@/utils/regex";
 import { isValid, parse } from "date-fns";
 import * as yup from "yup";
@@ -13,10 +14,8 @@ export const RegisterSchema = yup.object().shape({
     .oneOf([true], "Você deve aceitar os termos e condições")
     .required("Você deve aceitar os termos e condições"),
   sexOrientation: yup
-    .string()
-    .oneOf(["Masculino", "Feminino", "Outro"], "Orientação sexual inválida")
-    .optional()
-    .default(null),
+    .mixed<IOption<SexOrientation>>()
+    .required("Orientação sexual é obrigatória"),
   birthDate: yup
     .string()
     .required("Data de nascimento é obrigatória")
