@@ -17,3 +17,21 @@
         grid-column: span 2;
     }
 }
+.back {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    width: fit-content;
+
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--gray-dark);
+
+    transition: all ease-in-out 0.3s;
+    will-change: color;
+
+    &:hover {
+        color: var(--pink);
+        text-decoration: underline;
+    }
+}

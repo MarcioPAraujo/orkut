@@ -15,6 +15,8 @@ import { Checkbox } from "@/components/inputs/Checkbox/Checkbox";
 import { DefaultButton } from "@/components/buttons/DefaultButton/DefaultButton";
 import Select from "@/components/inputs/Select/Select";
 import { IOption } from "@/interfaces/Option";
+import Link from "next/link";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 const genreOptions: IOption<SexOrientation>[] = [
   { label: "Masculino", value: "Masculino" },
@@ -120,6 +122,10 @@ const RegisterForm = () => {
           type="submit"
           width="100%"
         />
+        <Link href="/" className={styles.back}>
+          <FaArrowLeftLong />
+          voltar
+        </Link>
       </form>
     </div>
   );
