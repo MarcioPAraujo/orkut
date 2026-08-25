@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.6rem;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0.8rem;
+}
+
+.title {
+    color: var(--pink);
+    font-size: 4rem;
+}
+
+.linksContainer {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+}
+
+.menu {
+    color: var(--gray-dark);
+    font-weight: 400;
+}
+.selctedMenu {
+    color: var(--pink);
+    font-weight: 400;
+}
+
+.photoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+.photoContainer > p {
+    color: var(--text);
+}
+.profilePhoto {
+    border-radius: 50%;
+    width: 6rem;
+    aspect-ratio: 1;
+}

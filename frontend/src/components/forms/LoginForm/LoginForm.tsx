@@ -8,8 +8,10 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { IoIosCheckmark } from "react-icons/io";
 import styles from "./loginForm.module.css";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
+  const { push } = useRouter();
   const {
     handleSubmit,
     register,
@@ -21,6 +23,7 @@ const LoginForm = () => {
 
   const onSubmit = (data: LoginSchemaType) => {
     console.log(data);
+    push("/inicio");
   };
 
   return (

@@ -1,0 +1,40 @@
+.container {
+    position: relative;
+}
+.container > svg {
+    position: absolute;
+    top: 20%;
+    left: 0.5rem;
+    color: var(--gray-dark);
+}
+
+.input {
+    font-size: 1.6rem;
+  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  height: 4.2rem;
+  width: 100%;
+  padding: 0rem 1rem 0rem 4rem;
+  color: var(--text);
+
+  background-color: var(--gray);
+
+
+  transition: all 0.2s ease;
+  will-change: border-color, background-color;
+  outline: none;
+
+  &:focus:not(:read-only) {
+    border-color: var(--soft-pink) ;
+    background-color: transparent;
+  }
+
+  &::placeholder {
+    color: var(--soft-gray);
+  }
+
+  &:disabled {
+    background-color: var(--transparent-gray);
+    color: var(--soft-gray);
+  }
+}
