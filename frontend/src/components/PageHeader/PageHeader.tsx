@@ -15,7 +15,6 @@ const menuLinks: ILinks[] = [
   { label: "Recados", path: "/recados" },
   { label: "Amigos", path: "/amigos" },
   { label: "Comunidades", path: "/comunidades" },
-  { label: "Aplicativos", path: "/aplicativos" },
   { label: "Feed", path: "/feed" },
 ];
 
