@@ -1,5 +1,6 @@
 "use client";
 
+import PageFooter from "@/components/PageFooter/PageFooter";
 import PageHeader from "@/components/PageHeader/PageHeader";
 
 interface RootLayoutProps {
@@ -10,8 +11,8 @@ const Contacts = ({ children }: RootLayoutProps) => {
   return (
     <>
       <PageHeader />
-      <main>{children}</main>
-      <footer>info links</footer>
+      <main style={{ backgroundColor: "#D9E6F7" }}>{children}</main>
+      <PageFooter />
     </>
   );
 };
