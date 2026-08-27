@@ -16,7 +16,7 @@
 .linksContainer {
     display: flex;
     align-items: center;
-    gap: 1.6rem;
+    gap: 3.2rem;
     flex-wrap: wrap;
 }
 

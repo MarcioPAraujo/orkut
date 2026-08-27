@@ -1,0 +1,6 @@
+.content {
+    background-color: var(--gray);
+    display: flex;
+    gap: 2.4rem;
+    padding: 2rem;
+}

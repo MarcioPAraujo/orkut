@@ -1,5 +1,6 @@
 "use client";
 
+import MainContent from "@/components/MainContent/MainContent";
 import PageFooter from "@/components/PageFooter/PageFooter";
 import PageHeader from "@/components/PageHeader/PageHeader";
 
@@ -11,7 +12,7 @@ const Contacts = ({ children }: RootLayoutProps) => {
   return (
     <>
       <PageHeader />
-      <main style={{ backgroundColor: "#D9E6F7" }}>{children}</main>
+      <MainContent>{children}</MainContent>
       <PageFooter />
     </>
   );

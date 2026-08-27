@@ -20,12 +20,14 @@ const menuLinks: ILinks[] = [
 
 export default function PageHeader() {
   const pathname = usePathname();
+
   const getLinkClassname = (menuPath: string) => {
     if (pathname.startsWith(menuPath)) {
       return styles.selctedMenu;
     }
     return styles.menu;
   };
+
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>Orkut</h1>
