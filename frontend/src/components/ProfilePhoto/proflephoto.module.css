@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    align-items: center;
+    padding: 1.6rem 0rem;
+}
+.userphoto {
+    border-radius: 50%;
+    width: 20rem;
+    border: 3px solid var(--pink);
+    padding: 0.5rem;
+}
+.emptyphoto {
+    border-radius: 50%;
+    width: 20rem;
+    aspect-ratio: 1;
+    background-color: var(--soft-gray);
+}
+.infocontainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--gray-dark);
+    font-weight: 400;
+}
+.name {
+    font-weight: 700;
+}

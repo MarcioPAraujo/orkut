@@ -1,0 +1,7 @@
+.line {
+    border: none;
+    height: 1px;
+    background-color: var(--soft-gray);
+    width: 100%;
+    align-self: center;
+}
