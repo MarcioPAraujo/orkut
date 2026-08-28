@@ -1,0 +1,9 @@
+.topic {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--gray-dark);
+    width: fit-content;
+}
