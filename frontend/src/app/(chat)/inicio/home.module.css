@@ -21,11 +21,3 @@
 .interests {
     flex: 1;
 }
-
-.topicscontainer {
-    padding: 1.6rem 0rem;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    gap: 1.6rem;
-}

@@ -1,0 +1,9 @@
+.topicscontainer {
+    padding: 1.6rem 0rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 15rem;
+    gap: 1.6rem;
+    text-indent: auto;
+}

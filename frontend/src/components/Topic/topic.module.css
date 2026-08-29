@@ -7,3 +7,8 @@
     color: var(--gray-dark);
     width: fit-content;
 }
+.button {
+    border: none;
+    background: none;
+    font-weight: 500;
+}

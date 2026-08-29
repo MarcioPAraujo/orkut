@@ -1,6 +1,6 @@
 import DefaultContentBox from "@/components/DefaultContentBox/DefaultContentBox";
 import styles from "./home.module.css";
-import ProfileArea from "./ProfileArea";
+import ProfileArea from "@/components/profile/ProfileArea";
 
 const IntialPage = () => {
     return (

@@ -27,7 +27,11 @@ function Topic({ icon, link, onClick, text }: ITopicProps) {
     }
     if (onClick) {
         return (
-            <button type="button" className={styles.topic}>
+            <button
+                type="button"
+                className={`${styles.topic} ${styles.button}`}
+                onClick={onClick}
+            >
                 <Icon color={icon.color || "#ED2590"} />
                 {text}
             </button>
