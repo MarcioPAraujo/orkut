@@ -1,0 +1,10 @@
+.contentcontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    width: 100%;
+}
+.profileinfo {
+    flex: 2;
+}
+

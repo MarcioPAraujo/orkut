@@ -9,10 +9,6 @@ const IntialPage = () => {
                 <DefaultContentBox>profile info</DefaultContentBox>
                 <DefaultContentBox>profile info</DefaultContentBox>
             </div>
-            <div className={`${styles.interests} ${styles.contentcontainer}`}>
-                <DefaultContentBox>friends</DefaultContentBox>
-                <DefaultContentBox>communities</DefaultContentBox>
-            </div>
         </>
     );
 };

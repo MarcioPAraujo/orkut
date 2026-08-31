@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.titlecontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title {
+    color: var(--text);
+    font-size: 1.6rem;
+}
+.action {
+    color: var(--pink);
+    font-size: 1.4rem;
+}
+.subtitle {
+    color: var(--pink);
+    font-size: 1.2rem;
+}
+.imagescontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+.imagewrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.imagewrapper img {
+    aspect-ratio: 1;
+    min-width: 5rem;
+    border-radius: 50%;
+}
+.textcontainer {
+      text-align: center;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}

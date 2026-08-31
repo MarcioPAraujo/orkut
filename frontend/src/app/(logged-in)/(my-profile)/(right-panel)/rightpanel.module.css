@@ -1,0 +1,9 @@
+.contentcontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    width: 100%;
+}
+.interests {
+    flex: 1;
+}

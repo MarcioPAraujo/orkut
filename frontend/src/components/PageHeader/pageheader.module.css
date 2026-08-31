@@ -6,6 +6,10 @@
     width: 100%;
     justify-content: space-around;
     padding: 0.8rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: white;
 }
 
 .title {
