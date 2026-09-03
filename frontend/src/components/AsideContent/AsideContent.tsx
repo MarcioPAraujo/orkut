@@ -22,14 +22,20 @@ function AsideContent({
             {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
             <div className={styles.imagescontainer}>
                 {content.map((item) => (
-                    <div key={item.title} className={styles.imagewrapper}>
+                    <Link
+                        key={item.title}
+                        href={item.link}
+                        className={styles.imagewrapper}
+                    >
                         {item.imageSrc && <img src={item.imageSrc} />}
-                        {!item.imageSrc && <div />}
+                        {!item.imageSrc && (
+                            <div className={styles.emptyphoto} />
+                        )}
                         <div className={styles.textcontainer}>
                             <span>{item.title}</span>
                             {item.counter && <span>({item.counter})</span>}
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

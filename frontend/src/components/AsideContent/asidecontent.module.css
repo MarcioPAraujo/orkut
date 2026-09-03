@@ -10,7 +10,7 @@
 }
 .title {
     color: var(--text);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 .action {
     color: var(--pink);
@@ -23,18 +23,28 @@
 .imagescontainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
-    gap: 1rem;
+    gap: 1.6rem;
     width: 100%;
 }
 .imagewrapper {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    transition: scale ease-in-out 0.2s;
+    &:hover {
+        scale: 1.1;
+    }
 }
 .imagewrapper img {
     aspect-ratio: 1;
-    min-width: 5rem;
+    min-width: 6rem;
     border-radius: 50%;
+}
+.emptyphoto {
+    aspect-ratio: 1;
+    min-width: 6rem;
+    border-radius: 50%;
+    background-color: var(--soft-gray);
 }
 .textcontainer {
       text-align: center;

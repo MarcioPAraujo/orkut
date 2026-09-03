@@ -1,5 +1,6 @@
 export interface IContent {
     title: string;
+    link: string;
     imageSrc?: string;
     counter?: number;
 }
