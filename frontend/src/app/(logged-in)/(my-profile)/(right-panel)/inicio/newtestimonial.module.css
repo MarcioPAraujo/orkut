@@ -1,0 +1,79 @@
+.caretbutton {
+    display: grid;
+    place-items: center;
+    border: none;
+    background: none;
+}
+.caretbutton svg {
+    color: var(--pink);
+}
+
+.contenthidden {
+    opacity: 0;
+    height: 0rem;
+    overflow: hidden;
+    transition: height ease-in-out 0.2s, opacity ease-in-out 0.3s;
+    will-change: height, opacity;
+}
+.contentvisible {
+    opacity: 1;
+    transition: height ease-in-out 0.2s, opacity ease-in-out 0.3s;
+    will-change: height, opacity;
+}
+
+.titlewrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.6rem;
+}
+.title {
+    font-size: 1.6rem;
+    color: var(--text);
+}
+
+.testimonialcontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-bottom: 1rem;
+}
+.testimonialcontainer hr {
+    border: none;
+    background-color: var(--gray);
+    height: 1px;
+    width: 100%;
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.photo {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 5rem;
+}
+
+.username {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+    font-weight: 600;
+}
+.text {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: var(--gray-dark);
+}
+
+.buttonscontainer {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: end;
+}
+.buttonscontainer > button {
+    border-radius: 1.8rem;
+}
